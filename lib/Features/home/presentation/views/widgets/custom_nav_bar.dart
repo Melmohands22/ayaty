@@ -1,6 +1,3 @@
-import 'package:ayaty/Features/Qibla/presentation/views/qibla_view.dart';
-import 'package:ayaty/Features/Surah/presentation/views/surarh_view.dart';
-import 'package:ayaty/Features/home/presentation/views/home_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
@@ -8,8 +5,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class CustomNavBar extends StatelessWidget {
+  final int currentIndex;
+  final Function(int) onTabChange;
+
   const CustomNavBar({
     super.key,
+    required this.currentIndex,
+    required this.onTabChange,
   });
 
   @override
@@ -17,17 +19,20 @@ class CustomNavBar extends StatelessWidget {
     return Container(
       height: 60.h,
       decoration: BoxDecoration(
-          color: Color(0xffEEFAED),
-          borderRadius: BorderRadius.circular(12),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.5),
-              spreadRadius: 1,
-              blurRadius: 7,
-              offset: const Offset(0, 3),
-            ),
-          ]),
+        color: const Color(0xffEEFAED),
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.5),
+            spreadRadius: 1,
+            blurRadius: 7,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
       child: GNav(
+        selectedIndex: currentIndex,
+        onTabChange: onTabChange,
         rippleColor: Colors.teal[300]!,
         hoverColor: Colors.grey[100]!,
         gap: 8,
@@ -42,23 +47,14 @@ class CustomNavBar extends StatelessWidget {
           GButton(
             icon: CupertinoIcons.home,
             text: 'Home',
-            onPressed: () {
-              Navigator.pushNamed(context, HomeView.id);
-            },
           ),
           GButton(
             icon: FlutterIslamicIcons.quran,
             text: 'Surah',
-            onPressed: () {
-              Navigator.pushNamed(context, SurarhView.id);
-            },
           ),
           GButton(
             icon: FlutterIslamicIcons.qibla,
             text: 'Qibla',
-            onPressed: () {
-              Navigator.pushNamed(context, QiblaView.id);
-            },
           ),
           GButton(
             icon: FlutterIslamicIcons.tasbih,

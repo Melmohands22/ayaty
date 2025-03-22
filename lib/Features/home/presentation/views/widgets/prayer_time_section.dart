@@ -18,7 +18,7 @@ class PrayerTimeSection extends StatelessWidget {
               'assets/images/islamic-banner-editing-png-images--background-png-images--thumbnail-1657298784.jpg'),
         ),
         Container(
-          height: 410,
+          height: 440,
           width: double.infinity,
           decoration: BoxDecoration(
             color: Colors.teal.withOpacity(0.9),

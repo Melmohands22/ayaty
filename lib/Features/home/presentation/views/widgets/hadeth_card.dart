@@ -36,7 +36,7 @@ class HadethCard extends StatelessWidget {
                   child: Image.asset(
                     'assets/images/close-up-islamic-new-year-concept.jpg',
                     width: 1.sw,
-                    height: 230.h,
+                    height: 260.h,
                     fit: BoxFit.cover,
                   ),
                 ),

@@ -1,4 +1,5 @@
 import 'package:ayaty/Features/home/presentation/views/home_view.dart';
+import 'package:ayaty/Features/home/presentation/views/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -62,7 +63,7 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 4), () {
-      Navigator.pushNamed(context, HomeView.id);
+      Navigator.pushNamed(context, MainView.id);
     });
     return Scaffold(
       
