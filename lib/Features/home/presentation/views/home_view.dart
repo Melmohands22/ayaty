@@ -15,10 +15,12 @@ class HomeView extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 20.h,
+              height: 30.h,
             ),
             HomeSlider(),
-            
+            SizedBox(
+              height: 40.h,
+            ),
             PrayerTimeSection()
           ],
         ),

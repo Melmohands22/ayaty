@@ -13,7 +13,7 @@ class PrayerTimeSection extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 120.0),
+          padding: const EdgeInsets.only(top: 150.0),
           child: Image.asset(
               'assets/images/islamic-banner-editing-png-images--background-png-images--thumbnail-1657298784.jpg'),
         ),

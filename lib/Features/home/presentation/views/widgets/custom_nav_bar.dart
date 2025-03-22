@@ -56,7 +56,7 @@ class CustomNavBar extends StatelessWidget {
           GButton(
             icon: FlutterIslamicIcons.qibla,
             text: 'Qibla',
-            onPressed: (context) {
+            onPressed: () {
               Navigator.pushNamed(context, QiblaView.id);
             },
           ),
