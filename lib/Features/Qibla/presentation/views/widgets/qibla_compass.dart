@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:ayaty/Features/Qibla/presentation/views/widgets/location_error_widget.dart';
-import 'package:ayaty/Features/Qibla/presentation/views/widgets/qibla_compass_widget.dart';
+import 'package:ayaty/Features/qibla/presentation/views/widgets/location_error_widget.dart';
+import 'package:ayaty/Features/qibla/presentation/views/widgets/qibla_compass_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_qiblah/flutter_qiblah.dart';
 import 'package:geolocator/geolocator.dart';

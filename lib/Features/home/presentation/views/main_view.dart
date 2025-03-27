@@ -1,6 +1,7 @@
-import 'package:ayaty/Features/Qibla/presentation/views/qibla_view.dart';
+import 'package:ayaty/Features/qibla/presentation/views/qibla_view.dart';
 import 'package:ayaty/Features/Surah/presentation/views/surarh_view.dart';
 import 'package:ayaty/Features/home/presentation/views/home_view.dart';
+import 'package:ayaty/Features/sebha/presentation/views/sebha_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
@@ -8,7 +9,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
-static const String id = 'MainView';
+  static const String id = 'MainView';
   @override
   State<MainView> createState() => _MainViewState();
 }
@@ -20,7 +21,7 @@ class _MainViewState extends State<MainView> {
     const HomeView(),
     const SurarhView(),
     const QiblaView(),
-    const Center(child: Text("Sebha View")), 
+    const SebhaView(),
   ];
 
   void _onTabChange(int index) {
@@ -59,7 +60,7 @@ class _MainViewState extends State<MainView> {
           color: Colors.black,
           curve: Curves.fastOutSlowIn,
           selectedIndex: _selectedIndex,
-          onTabChange: _onTabChange, // Handle tab change
+          onTabChange: _onTabChange,
           tabs: const [
             GButton(icon: CupertinoIcons.home, text: 'Home'),
             GButton(icon: FlutterIslamicIcons.quran, text: 'Surah'),

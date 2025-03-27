@@ -39,7 +39,7 @@ class PrayerTimeSection extends StatelessWidget {
                 child: PrayClock(),
               ),
               SizedBox(
-                height: 70,
+                height: 80,
               ),
               PrayTimeItem()
             ],
