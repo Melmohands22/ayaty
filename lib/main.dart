@@ -1,3 +1,4 @@
+import 'package:ayaty/Features/azkar/presentation/views/azkar_view.dart';
 import 'package:ayaty/Features/qibla/presentation/views/qibla_view.dart';
 import 'package:ayaty/Features/Surah/presentation/views/surarh_view.dart';
 import 'package:ayaty/Features/home/presentation/views/home_view.dart';
@@ -28,7 +29,8 @@ class Ayaty extends StatelessWidget {
         SurarhView.id: (context) => const SurarhView(),
         QiblaView.id: (context) => const QiblaView(),
         MainView.id: (context) => const MainView(),
-        SebhaView.id:(context) => const SebhaView(),
+        SebhaView.id: (context) => const SebhaView(),
+        AzkarView.id: (context) => const AzkarView(),
       },
       debugShowCheckedModeBanner: false,
       home: const SplashView(),

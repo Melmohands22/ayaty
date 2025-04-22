@@ -1,3 +1,4 @@
+import 'package:ayaty/Features/azkar/presentation/views/azkar_view.dart';
 import 'package:ayaty/Features/qibla/presentation/views/qibla_view.dart';
 import 'package:ayaty/Features/Surah/presentation/views/surarh_view.dart';
 import 'package:ayaty/Features/home/presentation/views/home_view.dart';
@@ -22,6 +23,7 @@ class _MainViewState extends State<MainView> {
     const SurarhView(),
     const QiblaView(),
     const SebhaView(),
+    const AzkarView(),
   ];
 
   void _onTabChange(int index) {
@@ -62,10 +64,11 @@ class _MainViewState extends State<MainView> {
           selectedIndex: _selectedIndex,
           onTabChange: _onTabChange,
           tabs: const [
-            GButton(icon: CupertinoIcons.home, text: 'Home'),
+            GButton(icon: FlutterIslamicIcons.family, text: 'Home'),
             GButton(icon: FlutterIslamicIcons.quran, text: 'Surah'),
             GButton(icon: FlutterIslamicIcons.qibla, text: 'Qibla'),
-            GButton(icon: FlutterIslamicIcons.tasbih, text: 'Sebha'),
+            GButton(icon: FlutterIslamicIcons.tasbihHand, text: 'Sebha'),
+            GButton(icon: FlutterIslamicIcons.prayingPerson, text: 'Azkar'),
           ],
         ),
       ),
